@@ -20,6 +20,23 @@
       <div id="unity-warning"> </div>
     </div>
     <script>
+
+      // Инициализация Telegram WebApp
+      const tg = window.Telegram.WebApp;
+
+      // Получение данных пользователя
+      const user = tg.initDataUnsafe.user;
+
+      // Передача данных в Unity через URL
+      if (user) {
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('user_id', user.id);
+        urlParams.set('username', user.username || '');
+        urlParams.set('first_name', user.first_name || '');
+        urlParams.set('last_name', user.last_name || '');
+        urlParams.set('photo_url', user.photo_url || '');
+        window.location.search = urlParams.toString();
+      }
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");

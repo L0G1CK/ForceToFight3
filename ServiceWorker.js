@@ -1,10 +1,10 @@
 const version = "1.3";  // Меняй версию при деплое
 const cacheName = `RussianCryptoCat-ForceToFight-${version}`;
 const contentToCache = [
-    "Build/ForceToFight.loader.js",
-    "Build/ForceToFight.framework.js",
-    "Build/ForceToFight.data",
-    "Build/ForceToFight.wasm",
+    "Build/RussianCryptoCat.loader.js",
+    "Build/RussianCryptoCat.framework.js",
+    "Build/RussianCryptoCat.data",
+    "Build/RussianCryptoCat.wasm",
     "TemplateData/style.css"
 ];
 
